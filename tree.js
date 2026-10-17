@@ -3,7 +3,6 @@
   const NS = 'http://www.w3.org/2000/svg';
   const tree = window.PLANT_TREE;
   const GAP = 8; // Equal left and right padding for every branch label.
-  const LEAF_STUB = 24; // Uniform line leading into every terminal taxon name.
   const DY = 44, MARGIN_X = 30, MARGIN_Y = 32;
   function svgEl(parent, tag, attrs, text) {
     const el = document.createElementNS(NS, tag);
@@ -65,7 +64,8 @@
     // Child branches begin at that same position: no extra tail is inserted.
     function place(node, startX) {
       node.x = startX;
-      node.endX = startX + (node.children.length ? GAP + node.labelWidth + GAP : LEAF_STUB + node.labelWidth + GAP);
+      // Every node uses identical label space, even if its label is hidden.
+      node.endX = startX + GAP + node.labelWidth + GAP;
       for (const child of node.children) place(child, node.endX);
     }
     place(root, MARGIN_X);
@@ -78,10 +78,11 @@
     svg.setAttribute('height', height);
 
     // Draw lines first. Branch text sits just ABOVE its horizontal line.
-    // For a hidden label the horizontal part is exactly 2 * GAP wide.
+    // Hidden internal labels reserve precisely two GAPs, with no text width.
     for (const n of nodes) {
       svgEl(svg, 'path', {
-        d: `M ${n.x} ${n.y} H ${n.children.length ? n.endX : n.x + LEAF_STUB}`,
+        // A terminal stops at its label; internal lines continue to the fork.
+        d: `M ${n.x} ${n.y} H ${n.children.length ? n.endX : n.x + GAP}`,
         class: 'branch'
       });
       if (n.children.length > 1) {
@@ -99,7 +100,7 @@
       let holder = svg;
       if (n.page && !focus) holder = svgEl(svg, 'a', {href: n.page});
       const label = svgEl(holder, 'text', {
-        x: n.x + (isLeaf ? LEAF_STUB : GAP),
+        x: n.x + GAP,
         y: isLeaf ? n.y + 5 : n.y - 8,
         class: className
       }, n.name);
