@@ -16,7 +16,8 @@ window.PLANT_TREE = {
           "rank": "division",
           "page": "families/bryophyta.html",
           "showOnMain": true,
-          "children": []
+          "children": [],
+          "commonName": "The Mosses"
         }
       ],
       "commonName": "Mosses"
@@ -28,10 +29,18 @@ window.PLANT_TREE = {
       "children": [
         {
           "id": "polypodiopsida",
-          "name": "Polypodiopsida",
+          "name": "Polypodiophyta",
           "rank": "class",
-          "showOnMain": true,
-          "children": [],
+          "showOnMain": false,
+          "children": [
+            {
+              "id": "polypodiopsida-2",
+              "name": "Polypodiopsida",
+              "showOnMain": true,
+              "commonName": "The Ferns",
+              "children": []
+            }
+          ],
           "commonName": "Ferns"
         },
         {
@@ -55,7 +64,8 @@ window.PLANT_TREE = {
                       "rank": "family",
                       "page": "families/pinaceae.html",
                       "showOnMain": true,
-                      "children": []
+                      "children": [],
+                      "commonName": "The Pines"
                     }
                   ],
                   "commonName": "Conifers"
@@ -84,7 +94,8 @@ window.PLANT_TREE = {
                           "rank": "family",
                           "page": "families/magnoliaceae.html",
                           "showOnMain": true,
-                          "children": []
+                          "children": [],
+                          "commonName": "The Magnolias"
                         }
                       ]
                     },
@@ -99,7 +110,8 @@ window.PLANT_TREE = {
                           "rank": "family",
                           "page": "families/piperaceae.html",
                           "showOnMain": true,
-                          "children": []
+                          "children": [],
+                          "commonName": "The Peppercorns"
                         }
                       ]
                     }
@@ -116,6 +128,22 @@ window.PLANT_TREE = {
                       "showOnMain": true,
                       "children": [
                         {
+                          "id": "alismatales",
+                          "name": "Alismatales",
+                          "showOnMain": false,
+                          "children": [
+                            {
+                              "id": "araceae",
+                              "name": "Araceae",
+                              "rank": "family",
+                              "page": "families/araceae.html",
+                              "showOnMain": true,
+                              "children": [],
+                              "commonName": "The Arums"
+                            }
+                          ]
+                        },
+                        {
                           "id": "liliales",
                           "name": "Liliales",
                           "showOnMain": false,
@@ -126,83 +154,64 @@ window.PLANT_TREE = {
                               "rank": "family",
                               "page": "families/liliaceae.html",
                               "showOnMain": true,
-                              "children": []
+                              "children": [],
+                              "commonName": "The Lillies"
                             }
                           ]
                         },
                         {
-                          "id": "other-monocots",
-                          "name": "Other monocots",
+                          "id": "commelinids",
+                          "name": "Commelinids",
                           "showOnMain": false,
                           "children": [
                             {
-                              "id": "alismatales",
-                              "name": "Alismatales",
+                              "id": "poales",
+                              "name": "Poales",
                               "showOnMain": false,
                               "children": [
                                 {
-                                  "id": "araceae",
-                                  "name": "Araceae",
+                                  "id": "bromeliaceae",
+                                  "name": "Bromeliaceae",
                                   "rank": "family",
-                                  "page": "families/araceae.html",
+                                  "page": "families/bromeliaceae.html",
                                   "showOnMain": true,
-                                  "children": []
+                                  "children": [],
+                                  "commonName": "The Bromeliads"
+                                },
+                                {
+                                  "id": "poaceae",
+                                  "name": "Poaceae",
+                                  "rank": "family",
+                                  "page": "families/poaceae.html",
+                                  "showOnMain": true,
+                                  "children": [],
+                                  "commonName": "The Grasses"
                                 }
                               ]
                             },
                             {
-                              "id": "commelinids",
-                              "name": "Commelinids",
+                              "id": "zingiberales",
+                              "name": "Zingiberales",
                               "showOnMain": false,
                               "children": [
                                 {
-                                  "id": "poales",
-                                  "name": "Poales",
-                                  "showOnMain": false,
-                                  "children": [
-                                    {
-                                      "id": "bromeliaceae",
-                                      "name": "Bromeliaceae",
-                                      "rank": "family",
-                                      "page": "families/bromeliaceae.html",
-                                      "showOnMain": true,
-                                      "children": []
-                                    },
-                                    {
-                                      "id": "poaceae",
-                                      "name": "Poaceae",
-                                      "rank": "family",
-                                      "page": "families/poaceae.html",
-                                      "showOnMain": true,
-                                      "children": []
-                                    }
-                                  ]
+                                  "id": "zingiberaceae",
+                                  "name": "Zingiberaceae",
+                                  "rank": "family",
+                                  "page": "families/zingiberaceae.html",
+                                  "showOnMain": true,
+                                  "children": [],
+                                  "commonName": "The Gingers"
                                 },
                                 {
-                                  "id": "zingiberales",
-                                  "name": "Zingiberales",
-                                  "showOnMain": false,
-                                  "children": [
-                                    {
-                                      "id": "zingiberaceae",
-                                      "name": "Zingiberaceae",
-                                      "rank": "family",
-                                      "page": "families/zingiberaceae.html",
-                                      "showOnMain": true,
-                                      "children": [],
-                                      "commonName": "The Gingers"
-                                    },
-                                    {
-                                      "id": "musaceae",
-                                      "name": "Musaceae",
-                                      "showOnMain": true,
-                                      "commonName": "The Bananas",
-                                      "children": []
-                                    }
-                                  ],
-                                  "commonName": "Gingers and bananas"
+                                  "id": "musaceae",
+                                  "name": "Musaceae",
+                                  "showOnMain": true,
+                                  "commonName": "The Bananas",
+                                  "children": []
                                 }
-                              ]
+                              ],
+                              "commonName": ""
                             }
                           ]
                         }
@@ -249,7 +258,8 @@ window.PLANT_TREE = {
                                       "rank": "family",
                                       "page": "families/vitaceae.html",
                                       "showOnMain": true,
-                                      "children": []
+                                      "children": [],
+                                      "commonName": "The Grapes"
                                     }
                                   ]
                                 },
@@ -274,7 +284,8 @@ window.PLANT_TREE = {
                                               "rank": "family",
                                               "page": "families/rosaceae.html",
                                               "showOnMain": true,
-                                              "children": []
+                                              "children": [],
+                                              "commonName": "The Roses"
                                             },
                                             {
                                               "id": "cannabaceae",
@@ -282,7 +293,8 @@ window.PLANT_TREE = {
                                               "rank": "family",
                                               "page": "families/cannabaceae.html",
                                               "showOnMain": true,
-                                              "children": []
+                                              "children": [],
+                                              "commonName": "The Hemps"
                                             }
                                           ]
                                         },
@@ -297,7 +309,8 @@ window.PLANT_TREE = {
                                               "rank": "family",
                                               "page": "families/cucurbitaceae.html",
                                               "showOnMain": true,
-                                              "children": []
+                                              "children": [],
+                                              "commonName": "The Melons"
                                             }
                                           ]
                                         }
@@ -319,7 +332,8 @@ window.PLANT_TREE = {
                                               "rank": "family",
                                               "page": "families/myrtaceae.html",
                                               "showOnMain": true,
-                                              "children": []
+                                              "children": [],
+                                              "commonName": "The Myrtles"
                                             }
                                           ]
                                         },
@@ -334,7 +348,8 @@ window.PLANT_TREE = {
                                               "rank": "family",
                                               "page": "families/rutaceae.html",
                                               "showOnMain": true,
-                                              "children": []
+                                              "children": [],
+                                              "commonName": "The Citruses"
                                             }
                                           ]
                                         }
@@ -401,11 +416,14 @@ window.PLANT_TREE = {
                                               "rank": "family",
                                               "page": "families/apiaceae.html",
                                               "showOnMain": true,
-                                              "children": []
+                                              "children": [],
+                                              "commonName": "The Umbrellifers"
                                             }
-                                          ]
+                                          ],
+                                          "commonName": ""
                                         }
-                                      ]
+                                      ],
+                                      "commonName": "Bellflowers"
                                     },
                                     {
                                       "id": "lamiids",
@@ -423,7 +441,8 @@ window.PLANT_TREE = {
                                               "rank": "family",
                                               "page": "families/lamiaceae.html",
                                               "showOnMain": true,
-                                              "children": []
+                                              "children": [],
+                                              "commonName": "The Mints"
                                             }
                                           ]
                                         },
@@ -438,7 +457,8 @@ window.PLANT_TREE = {
                                               "rank": "family",
                                               "page": "families/solanaceae.html",
                                               "showOnMain": true,
-                                              "children": []
+                                              "children": [],
+                                              "commonName": "The Nightshades"
                                             }
                                           ]
                                         }
@@ -460,7 +480,8 @@ window.PLANT_TREE = {
           ],
           "commonName": "Seed plants"
         }
-      ]
+      ],
+      "commonName": "True-leaf plants"
     }
   ],
   "commonName": "Land plants"
